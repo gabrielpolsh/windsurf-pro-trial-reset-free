@@ -2,6 +2,8 @@
 
 This repository provides four different methods to reactivate the free trial of Windsurf AI Pro. If you've lost access or want to test the software for a longer period, follow the instructions below.
 
+📺 **[Video Tutorial: Complete Guide](https://youtu.be/O2D3gXg0BjY)**
+
 ## ⚡ Methods Covered
 
 1. **Windows Sandbox** - Creating a temporary machine.
