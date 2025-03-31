@@ -4,6 +4,10 @@ This repository provides four different methods to reactivate the free trial of 
 
 📺 **[Video Tutorial: Complete Guide](https://youtu.be/O2D3gXg0BjY)**
 
+## 🔑 How Windsurf Free Trial Works
+
+Windsurf only activates your free trial when you first log into the application, not when you create an account. When using our methods, we activate accounts in isolated environments (sandbox, VM, or new user profiles), and once activated, you can use them in your main environment.
+
 ## ⚡ Methods Covered
 
 1. **Windows Sandbox** - Creating a temporary machine.
