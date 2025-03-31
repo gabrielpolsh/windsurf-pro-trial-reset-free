@@ -90,7 +90,6 @@ Since Windows Home doesn't include Hyper-V by default, follow these steps to ena
 2. Copy and paste the following code into Notepad:
 
 ```batch
-@batch
 pushd "%~dp0"
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hv.txt
 for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
@@ -109,11 +108,11 @@ pause
 ## 👤 Method 3: Creating a New User (Windows, Linux, macOS)
 
 - On Windows:
-  1. Go to **Settings > Accounts > Family & other users**.
-  2. Click **Add another user to this PC**.
-  3. Choose **Add a user without a Microsoft account**.
-  4. Set up the new user and log in.
-  5. Install Windsurf AI and create a new account.
+1. Go to **Settings > Accounts > Family & other users**.
+2. Click **Add another user to this PC**.
+3. Choose **Add a user without a Microsoft account**.
+4. Set up the new user and log in.
+5. Install Windsurf AI and create a new account.
 
 - On Linux/macOS:
   - The process varies by system. Look for a tutorial on how to create a new user for your OS.
