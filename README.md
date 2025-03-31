@@ -90,38 +90,7 @@ Since Windows Home doesn't include Hyper-V by default, follow these steps to ena
 2. Copy and paste the following code into Notepad:
 
 ```batch
-@echo off
-
-echo Checking for permissions
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
-echo Permission check result: %errorlevel%
-
-REM --> If error flag set, we do not have admin.
-if '%errorlevel%' NEQ '0' (
-echo Requesting administrative privileges...
-goto UACPrompt
-) else ( goto gotAdmin )
-
-:UACPrompt
-echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
-
-echo Running created temporary "%temp%\getadmin.vbs"
-timeout /T 2
-"%temp%\getadmin.vbs"
-exit /B
-
-:gotAdmin
-if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
-pushd "%CD%"
-CD /D "%~dp0" 
-
-echo Batch was successfully started with admin privileges
-echo .
-cls
-Title Hyper-V Installer
-
+@batch
 pushd "%~dp0"
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hv.txt
 for /f %%i in ('findstr /i . hv.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
@@ -155,7 +124,7 @@ pause
 
 If none of the methods above work for you, you can get a **pre-activated account** for just **$1**. This saves time and effort, allowing you to access all Windsurf AI Pro features instantly.
 
-🔗 **[Get a pre-activated account here](#)**
+🔗 **[Get a pre-activated account here](https://gabrielpolsh.shop/)**
 
 ---
 
